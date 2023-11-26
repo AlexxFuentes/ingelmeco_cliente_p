@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@layer base {
+  .box-shadow-card {
+    box-shadow: -14px 14px 0px #394867;
+  }
+} 
+
+/*HITS*/
+.ais-Hits {
+  width: 100%;
+  padding: 1rem;
+}
+
+.ais-Hits-list {
+  display: grid;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ais-Hits-item {
+  height: auto;
+}
+/*HITS FIN*/
+
+/*PANEL */
+.ais-Panel-body {
+  width: 270px;
+  font-weight: 400;
+}
+
+.ais-RefinementList {
+  width: 100%;
+}
+
+.ais-RefinementList-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ais-RefinementList-item {
+  margin-left: 0px;
+}
+
+.ais-RefinementList-label {
+  width: 100%;
+}
+
+.ais-RefinementList-labelText {
+  padding-left: 0;
+}
+
+.ais-RefinementList-checkbox {
+  color: rgb(62, 62, 248);
+  width: 20px;
+  margin-right: 0.4rem;
+}
+
+.ais-RefinementList-count {
+  background: #F5F5FA;
+  border: 1px solid #B6B7D5;
+  border-radius: 50%;
+  color: #202020;
+  display: inline-flex; 
+  flex-shrink: 0;
+  font-size: 0.64rem;
+  overflow: hidden;
+  margin-left: .25rem;
+  padding: 0 .3rem;
+}
+
+/*PAGINATION*/
+.pagination {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.ais-Pagination-list {
+  display: flex;
+  justify-content: center;
+}
+.ais-Pagination-item {
+  margin: 5px;
+}
+
+.ais-Pagination-link{
+ width: 100%;
+}
+/*PAGINATION FIN*/
+
+
+/*INPUT SEARCH*/
+.ais-SearchBox-form {
+  border: none;
+}
+.ais-SearchBox-input {
+  width: 35%;
+  padding: 5px;
+  border: none;
+  border-radius: 0.5em;
+  color: black;
+  background-color: #c4c4c450;
+}
+
+.ais-SearchBox-reset {
+  display: none;
+}
+
+.ais-SearchBox-submit {
+  width: 100px;
+  padding: 15px;
+  display: none;
+  color: #c4c4c450;
+}
+
+/* input {
+  border: none;
+  border-radius: 0.5em;
+  padding: 10px;
+  color: black;
+} */
+/*INPUT SEARCH FIN*/
+
+.img-filter {
+  filter: drop-shadow(0 3px 7px rgb(0 0 0 / 1));
+}
+
+/* Pantallas extra grandes */
+@media screen and (min-width: 1200px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Pantallas grandes */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pantallas medianas (Tablets) */
+@media screen and (min-width: 641px) and (max-width: 991px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ais-SearchBox-input {
+    width: 80%;
+  }
+}
+
+/* Pantallas pequeñas (Celulares) */
+@media screen and (max-width: 640px) {
+  .ais-Hits-list {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .ais-SearchBox-input {
+    width: 80%;
+  }
+}
+
+
